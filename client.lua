@@ -218,22 +218,22 @@ RegisterNetEvent('angelicxs-gangTerritory:LookUpCurrentGangs',function()
     for Gang, Details in pairs(IntGangs) do
         if Config.NHMenu then
             table.insert(GangList, {
-                header = tostring(Details.gang), 
+                header = tostring(Gang), 
                 event = 'angelicxs-gangTerritory:GangOptions',
-                args = Details.gang
+                args = Gang
             })
         elseif Config.QBMenu then
             table.insert(GangList, {
-                header = tostring(Details.gang),
+                header = tostring(Gang),
                 params = {
                     event = 'angelicxs-gangTerritory:GangOptions',
-                    args = Details.gang
+                    args = Gang
                 }
             })
         elseif Config.OXLib then
             table.insert(GangList, {
-                label = tostring(Details.gang),
-                args = { gang = Details.gang}
+                label = tostring(Gang),
+                args = { gang = Gang}
             })
         end
     end
